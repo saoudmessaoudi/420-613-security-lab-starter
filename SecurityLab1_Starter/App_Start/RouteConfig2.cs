@@ -7,7 +7,7 @@ using System.Web.Routing;
 
 namespace SecurityLab1_Starter
 {
-    public class RouteConfig
+    public class RouteConfig2
     {
         public static void RegisterRoutes(RouteCollection routes)
         {
@@ -16,15 +16,9 @@ namespace SecurityLab1_Starter
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
-                constraints: new { controller = "Home|Inventory", action = "Index|About|Contact" }
+                defaults: new { action = "Index", id = UrlParameter.Optional }
             );
-
-            routes.MapRoute(
-                name: "CatchAll",
-                url: "{*any}",
-                defaults: new { controller = "Error", action = "NotFound" }
-                );
         }
     }
 }
+
