@@ -18,5 +18,10 @@ namespace SecurityLab1_Starter.Controllers
         {
             return View("NotFound");
         }
+
+        public ActionResult ServerError()
+        {
+            return View();
+        }
     }
 }

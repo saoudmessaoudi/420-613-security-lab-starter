@@ -17,14 +17,9 @@ namespace SecurityLab1_Starter
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
-                constraints: new { controller = "Home|Inventory", action = "Index|About|Contact" }
             );
 
-            routes.MapRoute(
-                name: "CatchAll",
-                url: "{*any}",
-                defaults: new { controller = "Error", action = "NotFound" }
-                );
+            
         }
     }
 }
